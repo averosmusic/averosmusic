@@ -3,41 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 10px;
-    color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
-
-/* ------------ temporal */
-.redessociales{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    max-width: 20rem;
-    justify-content: center;
-}
-a{
-    text-align: center;
-}
-i{
-    font-size: 5rem;
-    text-align: center;
-}
-/* ------------ temporal */
-
-
-h1 {
-    margin: 0 0 2rem;
-    /* font-size: 4rem; */
-    font-size: 2rem;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2rem;
-    text-decoration: underline;
-    text-align: center;
+    color: whitesmoke;
 }
 
 body {
@@ -47,62 +14,51 @@ body {
     background-repeat: no-repeat;
 }
 
+main {
+    display: flex;
+    padding: 2.5rem;
+    justify-content: center;
+}
+
 nav {
-    top: 0;
     background-color: hsla(0, 0%, 0%, .85);
     height: 6rem;
     display: flex;
-    position: fixed;
     align-items: center;
     justify-content: center;
+    position: fixed;
     width: 100%;
     padding: 1rem 2.5rem;
     border-bottom: 1px solid white;
     z-index: 1;
+    top: 0;
 }
 
 nav img {
     height: 4rem;
 }
 
-nav #openMenu {
-    display: none;
+h1 {
+    font-size: 2rem;
+    text-align: center;
 }
 
-.nav-desktop {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
+.redessociales {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    max-width: 20rem;
+    justify-content: center;
 }
 
 a {
-    font-size: 1.5rem;
-    text-decoration: none;
+    text-align: center;
 }
 
-/* main {
-    display: flex;
-    justify-content: center;
-    margin-top: 6rem;
-    padding: 5rem;
-} */
-
-main {
-    display: flex;
-    justify-content: center;
-    margin-top: 6rem;
-    padding: 5rem;
-    height: 100vh;
+i {
+    font-size: 5rem;
+    text-align: center;
 }
-
-/* .content {
-    border-radius: 1rem;
-    max-width: 102.4rem;
-    width: 100%;
-    padding: 1rem;
-    background-color: hsla(0, 0%, 0%, .85);
-    backdrop-filter: blur(1.5rem);
-} */
 
 .content {
     display: grid;
@@ -111,19 +67,19 @@ main {
     border-radius: 1rem;
     max-width: 102.4rem;
     width: 100%;
+    margin-top: 6rem;
     padding: 1rem;
+    height: 100vh;
     background-color: hsla(0, 0%, 0%, .85);
     backdrop-filter: blur(1.5rem);
     text-align: center;
 }
 
-.insideDeAreas {
-    padding: 1rem;
+.cta-link {
+    font-size: 12px;
     background-color: hsla(0, 0%, 10%, .85);
+    padding: 1rem;
     border-radius: 1rem;
-
-}
-
-.coverAlbum {
-    width: 25rem;
+    text-decoration: none;
+    color: whitesmoke;
 }

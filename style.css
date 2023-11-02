@@ -13,7 +13,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100vw;
 }
 
 main {
@@ -102,7 +101,7 @@ nav img {
 
 .listaMusica {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     max-height: 480px;
     overflow-y: auto;
 }
@@ -124,7 +123,7 @@ nav img {
     justify-content: space-around;
 }
 
-.trabajando{
+.trabajando {
     margin: 2rem auto;
     text-decoration: underline;
 }

@@ -7,6 +7,14 @@
     color: whitesmoke;
 }
 
+h2 {
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 1.25rem;
+}
+
 body {
     display: grid;
     background-image: url(./resources/img/bg-page.jpg);
@@ -79,6 +87,15 @@ nav img {
     align-items: center;
 }
 
+.darkCover h2{
+    font-size: 1.25rem;
+    text-decoration: underline;
+}
+
+.tituloAlbum{
+    font-size: 1.25rem;
+}
+
 .card {
     display: grid;
     background-color: rgba(0, 0, 0, 0.66);
@@ -91,8 +108,32 @@ nav img {
     align-content: flex-start;
 }
 
-.cardTitle {
+.cardTitle, .areaBotones{
     margin-bottom: 2.5rem;
+}
+
+.areaBotones{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 1.5rem;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.botones.activo {
+    background-color: #FFF; /* Cambia el color de fondo para indicar el botón activo */
+    color: #000; /* Cambia el color de texto para mejorar la legibilidad */
+}
+
+.divider{
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .sectionTitle {
@@ -100,15 +141,18 @@ nav img {
 }
 
 .listaMusica {
-    display: grid;
-    gap: 2rem;
     max-height: 480px;
     overflow-y: auto;
 }
 
+.listaDisponibles,
+.listaProximos{
+    gap: 1rem;
+}
+
 .single {
     display: grid;
-    grid-template-columns: 10% 1fr 40%;
+    grid-template-columns: 10% 1fr 50%;
     gap: 1rem;
     text-align: start;
     align-items: center;
@@ -121,6 +165,14 @@ nav img {
 .plataformas {
     display: flex;
     justify-content: space-around;
+}
+
+.listaDisponibles{
+    display: grid;
+}
+
+.listaProximos{
+    display: none;
 }
 
 .trabajando {

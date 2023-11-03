@@ -27,54 +27,62 @@
                         <div class="albumEmergentes">
                             <div class="darkCover">
                                 <h2>Próximamente</h2>
-                                <h1 class="tituloAlbum">Averos - Emergentes</h1>
+                                <p class="tituloAlbum">Averos - Emergentes</p>
                             </div>
                             <img class="coverAlbum" src="./resources/img/cover.jpg" alt="Portada del álbum">
                         </div>
                     </div>
                     <div class="b-musica card">
-                        <h3 class="cardTitle">Lanzamientos</h3>
+                        <div class="areaBotones">
+                            <h3 class="botones disponibles activo" onclick="mostrarLista('disponibles')">Ya disponibles</h3>
+                            <div class="divider"></div>
+                            <h3 class="botones proximos" onclick="mostrarLista('proximos')">Próximos lanzamientos</h3>
+                        </div>
                         <div class="listaMusica">
-                            <div class="single single-1">
-                                <img src="./resources/img/singles/single-1/cover.jpg" alt="">
-                                <div class="musicData">
-                                    <h4 class="primeraLinea">Averos Music, AddiSonG</h4>
-                                    <p class="cancionNombre">Ser Un Niño Otra Vez</p>
-                                </div>
-                                <div class="plataformas">
-                                    <a href="https://open.spotify.com/album/2aNcEZSbpNSylzpE1WuRFD" target="_blank"
-                                        rel="noopener noreferrer"><i class="fab fa-spotify"></i></a>
-                                    <a href="https://music.youtube.com/channel/UCFSM4KYGPPjylWwDlBGEqOA?si=nNNl1cKEEpQGB5G2"
-                                        target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://music.apple.com/us/album/ser-un-ni%C3%B1o-otra-vez-feat-addisong/1708634683?i=1708634685"
-                                        target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i></a>
-                                </div>
-                            </div>
-                            <div class="single single-2">
-                                <img src="./resources/img/singles/single-2/cover.png" alt="">
-                                <div class="musicData">
-                                    <h4 class="primeraLinea">Averos Music, Fernando Ville</h4>
-                                    <p class="cancionNombre">Primera Vez</p>
-                                </div>
-                                <div class="plataformas">
-                                    <p>Próximamente</p>
+                            <div class="listaDisponibles">
+                                <div class="single single-1">
+                                    <img src="./resources/img/singles/single-1/cover.jpg" alt="">
+                                    <div class="musicData">
+                                        <h4 class="primeraLinea">Averos Music, AddiSonG</h4>
+                                        <p class="cancionNombre">Ser Un Niño Otra Vez</p>
+                                    </div>
+                                    <div class="plataformas">
+                                        <a href="https://open.spotify.com/album/2aNcEZSbpNSylzpE1WuRFD" target="_blank"
+                                            rel="noopener noreferrer"><i class="fab fa-spotify"></i></a>
+                                        <a href="https://music.youtube.com/channel/UCFSM4KYGPPjylWwDlBGEqOA?si=nNNl1cKEEpQGB5G2"
+                                            target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                                        <a href="https://music.apple.com/us/album/ser-un-ni%C3%B1o-otra-vez-feat-addisong/1708634683?i=1708634685"
+                                            target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="single single-3">
-                                <img src="./resources/img/singles/single-3/cover.jpg" alt="">
-                                <div class="musicData">
-                                    <h4 class="primeraLinea">Averos Music, AddiSonG</h4>
-                                    <p class="cancionNombre">Sobrenatural</p>
+                            <div class="listaProximos">
+                                <div class="single single-2">
+                                    <img src="./resources/img/singles/single-2/cover.png" alt="">
+                                    <div class="musicData">
+                                        <h4 class="primeraLinea">Averos Music, Fernando Ville</h4>
+                                        <p class="cancionNombre">Primera Vez</p>
+                                    </div>
+                                    <div class="plataformas">
+                                        <p>Próximamente</p>
+                                    </div>
                                 </div>
-                                <div class="plataformas">
-                                    <p>Próximamente</p>
+                                <div class="single single-3">
+                                    <img src="./resources/img/singles/single-3/cover.jpg" alt="">
+                                    <div class="musicData">
+                                        <h4 class="primeraLinea">Averos Music, AddiSonG</h4>
+                                        <p class="cancionNombre">Sobrenatural</p>
+                                    </div>
+                                    <div class="plataformas">
+                                        <p>Próximamente</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="trabajando">
-                    <h1>AUN ESTAMOS TRABAJANDO PARA GRANDES SORPRESAS...</h1>
+                    <h1>SEGUIMOS TRABAJANDO PARA GRANDES SORPRESAS...</h1>
                 </div>
                 <div class="redessociales">
                     <p>Síganos en nuestras redes sociales:</p>
@@ -86,6 +94,7 @@
                 </div>
             </div>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@ h2 {
     font-size: 2.5rem;
 }
 
-h3{
+h3 {
     font-size: 1.25rem;
 }
 
@@ -29,7 +29,7 @@ main {
 }
 
 nav.topnav {
-    background-color: hsla(0, 0%, 0%, .95);
+    background-color: hsla(0, 0%, 0%, 0.95);
     height: 6rem;
     display: flex;
     align-items: center;
@@ -87,12 +87,12 @@ nav img {
     align-items: center;
 }
 
-.darkCover h2{
+.darkCover h2 {
     font-size: 1.25rem;
     text-decoration: underline;
 }
 
-.tituloAlbum{
+.tituloAlbum {
     font-size: 1.25rem;
 }
 
@@ -108,18 +108,19 @@ nav img {
     align-content: flex-start;
 }
 
-.cardTitle, .areaBotones{
+.cardTitle,
+.areaBotones {
     margin-bottom: 2.5rem;
 }
 
-.areaBotones{
+.areaBotones {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1px 1fr;
     gap: 1.5rem;
 }
 
-.botones{
+.botones {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,11 +129,11 @@ nav img {
 }
 
 .botones.activo {
-    background-color: #FFF; /* Cambia el color de fondo para indicar el botón activo */
-    color: #000; /* Cambia el color de texto para mejorar la legibilidad */
+    background-color: #FFF;
+    color: #000;
 }
 
-.divider{
+.divider {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -146,7 +147,7 @@ nav img {
 }
 
 .listaDisponibles,
-.listaProximos{
+.listaProximos {
     gap: 1rem;
 }
 
@@ -167,11 +168,11 @@ nav img {
     justify-content: space-around;
 }
 
-.listaDisponibles{
+.listaDisponibles {
     display: grid;
 }
 
-.listaProximos{
+.listaProximos {
     display: none;
 }
 

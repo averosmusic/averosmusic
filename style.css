@@ -163,6 +163,11 @@ nav img {
     width: 100%;
 }
 
+.musicData{
+    display: grid;
+    gap: .5rem;
+}
+
 .plataformas {
     display: flex;
     justify-content: space-around;

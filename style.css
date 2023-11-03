@@ -21,7 +21,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment:fixed
+    background-attachment: fixed;
 }
 
 main {
@@ -154,7 +154,7 @@ nav img {
 
 .single {
     display: grid;
-    grid-template-columns: 10% 1fr 50%;
+    grid-template-columns: 10% 40% 1fr;
     gap: 1rem;
     text-align: start;
     align-items: center;
@@ -170,8 +170,9 @@ nav img {
 }
 
 .plataformas {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
 .listaDisponibles {

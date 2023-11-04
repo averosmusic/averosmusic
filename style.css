@@ -24,7 +24,7 @@ body {
 }
 
 main {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
@@ -54,9 +54,15 @@ nav img {
     min-width: 30rem;
     margin: 8rem 2.5rem 2.5rem;
     padding: 1rem;
-    background-color: hsla(0, 0%, 0%, 0.66);
-    backdrop-filter: blur(1.5rem);
     text-align: center;
+    backdrop-filter: blur(1.5rem);
+    gap: 2rem;
+}
+
+.area{
+    background-color: hsla(0, 0%, 0%, 0.66);
+    border-radius: 2rem;
+    padding: 2rem;
 }
 
 .musica {
@@ -66,7 +72,7 @@ nav img {
 .boxMusic {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .coverAlbum {
@@ -98,8 +104,6 @@ nav img {
 
 .card {
     display: grid;
-    background-color: rgba(0, 0, 0, 0.66);
-    padding: 2rem;
     border-radius: 2rem;
     align-content: center;
 }
@@ -108,7 +112,6 @@ nav img {
     align-content: flex-start;
 }
 
-.cardTitle,
 .areaBotones {
     margin-bottom: 2.5rem;
 }
@@ -154,7 +157,6 @@ nav img {
 .single {
     display: grid;
     grid-template-columns: 10% 40% 1fr;
-    gap: 1rem;
     text-align: start;
     align-items: center;
 }
@@ -164,6 +166,7 @@ nav img {
 }
 
 .musicData {
+    padding-left: 1rem;
     display: grid;
     gap: 0.5rem;
 }
@@ -193,7 +196,6 @@ nav img {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 2rem auto;
 }
 
 i {

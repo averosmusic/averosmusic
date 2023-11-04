@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 8px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: whitesmoke;
 }
@@ -62,7 +62,7 @@ nav img {
 .area{
     background-color: hsla(0, 0%, 0%, 0.80);
     border-radius: 2rem;
-    padding: 0 1rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .musica {
@@ -158,7 +158,6 @@ nav img {
     display: grid;
     grid-template-columns: 10% 40% 1fr;
     text-align: start;
-    padding: 0 2rem;
     align-items: center;
 }
 

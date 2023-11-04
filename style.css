@@ -62,7 +62,7 @@ nav img {
 .area{
     background-color: hsla(0, 0%, 0%, 0.66);
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .musica {
@@ -191,6 +191,7 @@ nav img {
 }
 
 .redessociales {
+    border-radius: 0;
     display: flex;
     width: 100%;
     justify-content: center;

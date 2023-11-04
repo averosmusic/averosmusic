@@ -21,7 +21,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 main {
@@ -164,15 +163,15 @@ nav img {
     width: 100%;
 }
 
-.musicData{
+.musicData {
     display: grid;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 .plataformas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .listaDisponibles {
@@ -199,6 +198,7 @@ nav img {
 
 i {
     font-size: 3rem;
+    width: 3rem;
     text-align: center;
 }
 

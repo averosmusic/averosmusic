@@ -21,6 +21,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 main {
@@ -59,7 +60,7 @@ nav img {
     gap: 2rem;
 }
 
-.area{
+.area {
     background-color: hsla(0, 0%, 0%, 0.80);
     border-radius: 2rem;
     padding: 1rem 2rem;
@@ -131,7 +132,7 @@ nav img {
     padding: 1rem;
 }
 
-.botones.activo {
+.botones.activo, .buttonComprar {
     background-color: #FFF;
     color: #000;
 }
@@ -186,8 +187,75 @@ nav img {
 }
 
 .trabajando {
-    margin: 2rem auto;
+    width: 100%;
+    padding: 2.5rem;
     text-decoration: underline;
+}
+
+.trabajando h2{
+    font-size: 1.5rem; 
+}
+
+.item {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.carrousel .images{
+    margin-top: 2rem;
+    position: relative;
+}
+
+.carrousel img {
+    border-radius: 1rem;
+    display: none;
+    width: 100%;
+}
+
+.carrousel img.active {
+    display: block;
+}
+
+.carrousel img.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#next, #prev{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .5rem;
+    font-size: 5rem;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next{
+    right: 0;
+}
+
+#prev{
+    left: 0;
+}
+
+.buttonComprar{
+    width: 50%;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+
 }
 
 .redessociales {

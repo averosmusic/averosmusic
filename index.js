@@ -1,7 +1,7 @@
 function mostrarLista(tipo) {
     document.querySelector('.listaDisponibles').style.display = 'none';
     document.querySelector('.listaProximos').style.display = 'none';
-    
+
     document.querySelector('.botones.disponibles').classList.remove('activo');
     document.querySelector('.botones.proximos').classList.remove('activo');
 
@@ -13,3 +13,30 @@ function mostrarLista(tipo) {
         document.querySelector('.botones.proximos').classList.add('activo');
     }
 }
+
+function cambiarCarrousel() {
+    const prevButton = document.querySelector("#prev");
+    const nextButton = document.querySelector("#next");
+    const images = document.querySelectorAll('.carrousel img');
+    let currentIndex = 0;
+
+    images[currentIndex].classList.add('active');
+    images.forEach(image => {
+        image.classList.add('fade');
+    });
+    
+
+    nextButton.addEventListener('click', () => {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    });
+
+    prevButton.addEventListener('click', () => {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        images[currentIndex].classList.add('active');
+    });
+}
+
+cambiarCarrousel();

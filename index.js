@@ -15,36 +15,63 @@ function mostrarLista(tipo) {
     }
 }
 
+// Funciones de carrousel y sus funciones internas
 
+const carrouseles = document.querySelectorAll('.carrousel');
 
-const carrouseles = document.querySelectorAll('.carrousel')
+carrouseles.forEach(carrousel => {
+    const prevButton = carrousel.querySelector("#prev");
+    const nextButton = carrousel.querySelector("#next");
+    const images = carrousel.querySelectorAll('.carrousel img');
+    const dotsContainer = carrousel.querySelector('.carrousel > div > div');
+    let currentIndex = 0;
 
-carrouseles.forEach(carrousel=>{
-    function cambiarCarrousel() {
-        const prevButton = carrousel.querySelector("#prev");
-        const nextButton = carrousel.querySelector("#next");
-        const images = carrousel.querySelectorAll('.carrousel img');
-        let currentIndex = 0;
-    
-        images[currentIndex].classList.add('active');
-        images.forEach(image => {
-            image.classList.add('fade');
-        });
-        
-    
-        nextButton.addEventListener('click', () => {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add('active');
-        });
-    
-        prevButton.addEventListener('click', () => {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            images[currentIndex].classList.add('active');
-        });
+    if (!dotsContainer) {
+        console.error("No se ha encontrado el contenedor de puntos (dotsContainer). Verifica tu selector.");
+        return;
     }
-    
-    cambiarCarrousel();
-})
 
+    const createDot = (index) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        dot.addEventListener("click", () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+    };
+
+    images.forEach((_, index) => createDot(index));
+
+    const updateCarousel = () => {
+        images.forEach((image, i) => image.style.display = i === currentIndex ? "block" : "none");
+
+        const dots = dotsContainer.querySelectorAll(".dot");
+        dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+    };
+
+    updateCarousel();
+
+    const handleButtonClick = (increment) => {
+        currentIndex = (currentIndex + increment + images.length) % images.length;
+        updateCarousel();
+    };
+
+    nextButton.addEventListener('click', () => handleButtonClick(1));
+    prevButton.addEventListener('click', () => handleButtonClick(-1));
+
+    let touchStartX = null;
+
+    carrousel.addEventListener('touchstart', (e) => touchStartX = e.touches[0].clientX);
+
+    carrousel.addEventListener('touchend', (e) => {
+        if (touchStartX !== null) {
+            const touchEndX = e.changedTouches[0].clientX;
+            const deltaX = touchEndX - touchStartX;
+
+            handleButtonClick(deltaX > 50 ? 1 : deltaX < -50 ? -1 : 0);
+
+            touchStartX = null;
+        }
+    });
+});

@@ -15,7 +15,7 @@ function mostrarLista(tipo) {
     }
 }
 
-// Funciones de carrousel y sus funciones internas
+// Funcion del carrousel y sus funciones internas
 
 const carrouseles = document.querySelectorAll('.carrousel');
 

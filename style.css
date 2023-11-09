@@ -32,7 +32,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
+    filter: grayscale(100%);
 }
 
 
@@ -65,7 +65,7 @@ nav img {
     border-radius: 1rem;
     max-width: 102.4rem;
     min-width: 30rem;
-    margin: 8rem 2.5rem 2.5rem;
+    margin: 8rem 1.5rem 2.5rem;
     padding: 1rem;
     text-align: center;
     backdrop-filter: blur(1.5rem);

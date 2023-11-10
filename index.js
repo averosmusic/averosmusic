@@ -1,18 +1,15 @@
 // funciones para los botones de "Ya disponibles" y "Proximos Lanzamientos"
 function mostrarLista(tipo) {
-    document.querySelector('.listaDisponibles').style.display = 'none';
-    document.querySelector('.listaProximos').style.display = 'none';
+    const disponibles = document.querySelector('.listaDisponibles');
+    const proximos = document.querySelector('.listaProximos');
+    const botonesDisponibles = document.querySelector('.botones.disponibles');
+    const botonesProximos = document.querySelector('.botones.proximos');
 
-    document.querySelector('.botones.disponibles').classList.remove('activo');
-    document.querySelector('.botones.proximos').classList.remove('activo');
+    disponibles.style.display = tipo === 'disponibles' ? 'grid' : 'none';
+    proximos.style.display = tipo === 'proximos' ? 'grid' : 'none';
 
-    if (tipo === 'disponibles') {
-        document.querySelector('.listaDisponibles').style.display = 'grid';
-        document.querySelector('.botones.disponibles').classList.add('activo');
-    } else if (tipo === 'proximos') {
-        document.querySelector('.listaProximos').style.display = 'grid';
-        document.querySelector('.botones.proximos').classList.add('activo');
-    }
+    botonesDisponibles.classList.toggle('activo', tipo === 'disponibles');
+    botonesProximos.classList.toggle('activo', tipo === 'proximos');
 }
 
 // Funcion del carrousel y sus funciones internas
@@ -31,46 +28,36 @@ carrouseles.forEach(carrousel => {
         return;
     }
 
-    const createDot = (index) => {
+    const createDot = index => {
         const dot = document.createElement("span");
         dot.classList.add("dot");
-        dot.addEventListener("click", () => {
-            currentIndex = index;
-            updateCarousel();
-        });
+        dot.addEventListener("click", () => updateCarousel(index));
         dotsContainer.appendChild(dot);
     };
 
     images.forEach((_, index) => createDot(index));
 
-    const updateCarousel = () => {
+    const updateCarousel = index => {
+        currentIndex = index !== undefined ? index : currentIndex;
         images.forEach((image, i) => image.style.display = i === currentIndex ? "block" : "none");
-
-        const dots = dotsContainer.querySelectorAll(".dot");
-        dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
+        dotsContainer.querySelectorAll(".dot").forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
     };
 
     updateCarousel();
 
-    const handleButtonClick = (increment) => {
-        currentIndex = (currentIndex + increment + images.length) % images.length;
-        updateCarousel();
-    };
+    const handleButtonClick = increment => updateCarousel((currentIndex + increment + images.length) % images.length);
 
     nextButton.addEventListener('click', () => handleButtonClick(1));
     prevButton.addEventListener('click', () => handleButtonClick(-1));
 
     let touchStartX = null;
 
-    carrousel.addEventListener('touchstart', (e) => touchStartX = e.touches[0].clientX);
+    carrousel.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
 
-    carrousel.addEventListener('touchend', (e) => {
+    carrousel.addEventListener('touchend', e => {
         if (touchStartX !== null) {
-            const touchEndX = e.changedTouches[0].clientX;
-            const deltaX = touchEndX - touchStartX;
-
-            handleButtonClick(deltaX > 50 ? 1 : deltaX < -50 ? -1 : 0);
-
+            const deltaX = e.changedTouches[0].clientX - touchStartX;
+            handleButtonClick(deltaX > 50 ? -1 : deltaX < -50 ? 1 : 0);
             touchStartX = null;
         }
     });

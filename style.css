@@ -2,17 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 8px;
+    font-size: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: whitesmoke;
 }
 
 h2 {
-    font-size: 2.5rem;
-}
-
-h3 {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
 }
 
 body {
@@ -63,7 +59,7 @@ nav img {
     display: grid;
     align-content: space-around;
     border-radius: 1rem;
-    max-width: 102.4rem;
+    max-width: 136rem;
     min-width: 30rem;
     margin: 8rem 1.5rem 2.5rem;
     padding: 1rem;
@@ -111,10 +107,6 @@ nav img {
     text-decoration: underline;
 }
 
-.tituloAlbum {
-    font-size: 1.25rem;
-}
-
 .card {
     display: grid;
     border-radius: 2rem;
@@ -142,6 +134,7 @@ nav img {
     align-items: center;
     border-radius: 1rem;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .botones.activo,
@@ -206,7 +199,7 @@ nav img {
 }
 
 .trabajando h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .item {
@@ -231,7 +224,7 @@ nav img {
 }
 
 .carrousel h2 {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .carrousel img {
@@ -268,7 +261,7 @@ nav img {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     padding: .5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
     top: 50%;
     transform: translateY(-50%);
@@ -301,8 +294,8 @@ nav img {
 .buttonComprar {
     width: 66%;
     margin: 2rem auto;
-    padding: 2rem;
-    font-size: 1.5rem;
+    padding: 1rem;
+    font-size: 1rem;
     border-radius: 1rem;
     text-decoration: none;
 }

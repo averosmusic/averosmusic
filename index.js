@@ -135,38 +135,36 @@ const PROXIMOSLANZAMIENTOS = [
     //   nombreCancion: "",
     //   coverURL: "imagenCover"
     // }
-  ];
-  
-  function generarListaProximos() {
+];
+
+function generarListaProximos() {
     const listaProximos = document.querySelector('.listaProximos');
     const listaProximosVacia = document.createElement('p');
     listaProximosVacia.classList.add('listaVacia');
-    listaProximosVacia.textContent = "Estamos plasmando ideas del alma en música... Sigan atentos en nuestras redes oficiales";
-  
+    listaProximosVacia.innerHTML = 'Estamos plasmando ideas del alma en música...<br>Sigan atentos en nuestras redes oficiales';
+
     if (PROXIMOSLANZAMIENTOS.length === 0) {
-      listaProximos.appendChild(listaProximosVacia);
+        listaProximos.appendChild(listaProximosVacia);
     } else {
-      PROXIMOSLANZAMIENTOS.forEach((cancion) => {
-        const singleDiv = document.createElement('div');
-        singleDiv.classList.add('single');
-  
-        const singleContent = `
+        PROXIMOSLANZAMIENTOS.forEach((cancion) => {
+            const singleDiv = document.createElement('div');
+            singleDiv.classList.add('single');
+
+            const singleContent = `
           <img src="${cancion.coverURL}">
           <div class="musicData">
-            <h4 class="primeraLinea">${cancion.artistas}</h4>
+            <h4 class="primeraLinea">${cancion.artista}</h4>
             <p class="cancionNombre">${cancion.nombreCancion}</p>
           </div>
           <div class="plataformas">
             <p>Próximamente</p>
           </div>
         `;
-  
-        singleDiv.innerHTML = singleContent;
-        listaProximos.appendChild(singleDiv);
-      });
-    }
-  }
-  
-  generarListaProximos();
-  
 
+            singleDiv.innerHTML = singleContent;
+            listaProximos.appendChild(singleDiv);
+        });
+    }
+}
+
+generarListaProximos();

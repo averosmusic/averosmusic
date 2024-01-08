@@ -192,6 +192,10 @@ nav img {
     display: none;
 }
 
+.listaVacia {
+    padding: 1rem 0;
+}
+
 .trabajando {
     width: 100%;
     padding: 2.5rem;

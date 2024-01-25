@@ -1,0 +1,19 @@
+.redesSociales {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: #000;
+}
+
+.siganosRedes {
+    text-align: center;
+    text-wrap: pretty;
+}
+
+.plataformasOficiales {
+    display: flex;
+    justify-content: space-evenly;
+}

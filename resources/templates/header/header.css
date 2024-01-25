@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, .9);
+    border-bottom: 1px solid #FFF;
+}
+
+.averosLogo {
+    width: 4rem;
+    aspect-ratio: 1/1;
+}

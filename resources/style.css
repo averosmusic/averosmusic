@@ -1,0 +1,290 @@
+body {
+    display: grid;
+}
+
+body::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    position: fixed;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.contenido {
+    display: grid;
+    width: 100%;
+    max-width: 85rem;
+    background-color: hsla(0, 0%, 100%, .1);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    padding: 1rem;
+    margin: 0 1rem;
+    border-radius: 2rem;
+    gap: 2rem;
+}
+
+.area {
+    display: grid;
+    background-color: hsla(0, 0%, 0%, .5);
+    border-radius: 1rem;
+    grid-template-rows: 4rem 1fr;
+}
+
+.tituloSeccion {
+    display: grid;
+    place-items: center;
+}
+
+.boxMusica {
+    display: grid;
+    padding: 0 1rem 1rem 1rem;
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: 37.5% auto;
+    grid-template-areas: "listaProximos listaProximos"
+        "albumProximo listaDisponibles";
+}
+
+.listaProximos {
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: hsla(0, 0%, 0%, .75);
+    border-radius: .5rem;
+    grid-area: listaProximos;
+}
+
+.listaProximos img {
+    width: 20%;
+    aspect-ratio: 1/1;
+}
+
+.mediaProxInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.albumProximo {
+    grid-area: albumProximo;
+}
+
+.containerCover {
+    position: relative;
+}
+
+.darkCover {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, .9);
+}
+
+.darkCover p {
+    text-align: center;
+}
+
+.containerCover>img {
+    width: 100%;
+}
+
+.listaDisponibles {
+    display: grid;
+    grid-area: listaDisponibles;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: hsla(0, 0%, 0%, .75);
+    border-radius: .5rem;
+}
+
+.musicaArea,
+.videoArea {
+    display: grid;
+    max-height: 19rem;
+    gap: 1rem;
+    grid-template-rows: auto 1fr;
+}
+
+.titleArea {
+    display: grid;
+    place-content: center;
+    padding: .5rem;
+    border-radius: .5rem .5rem 0 0;
+    background-color: hsla(0, 0%, 100%, .1);
+    text-align: center;
+}
+
+.mediaDisponibles {
+    display: grid;
+    gap: .75rem;
+    overflow-y: scroll;
+}
+
+.single {
+    display: grid;
+    gap: .5rem;
+    align-items: center;
+    grid-template-columns: 10% 50% 1fr;
+}
+
+.single>img {
+    width: 100%;
+}
+
+.plataformas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.seccion-tab {
+    padding: 1rem 0;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 75% auto;
+}
+
+.botonMostrarOcultar {
+    cursor: pointer;
+}
+
+.infoTabMerch {
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem 1rem;
+    gap: 1rem;
+}
+
+.carrousel {
+    display: grid;
+    grid-template-rows: 6rem 1fr 3rem;
+    padding: 1rem;
+    background-color: hsla(0, 0%, 0%, .75);
+    border-radius: 2rem;
+    gap: .5rem;
+}
+
+.carrousel h2 {
+    display: grid;
+    margin: auto;
+    text-wrap: pretty;
+    align-items: center;
+    text-align: center;
+}
+
+.slides {
+    position: relative;
+}
+
+.slides img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+}
+
+.prevImagen,
+.nextImagen {
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+    position: absolute;
+    padding: .75rem;
+    border-radius: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: hsla(0, 0%, 0%, .75);
+    cursor: pointer;
+}
+
+.prevImagen {
+    left: .125rem;
+}
+
+.nextImagen {
+    right: .125rem;
+}
+
+.boxDotIndex {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    bottom: 5%;
+}
+
+.dotIndex {
+    height: 10px;
+    aspect-ratio: 1/1;
+    background-color: hsla(0, 0%, 50%, .5);
+    border-radius: 50%;
+}
+
+.dotActivo {
+    background-color: hsla(0, 0%, 0%, .75);
+    height: 20px;
+    aspect-ratio: 1/1;
+}
+
+.botonComprar {
+    margin: auto;
+    display: grid;
+    align-items: center;
+    padding: 0 3rem;
+    background-color: hsla(0, 0%, 100%, .8);
+    height: 100%;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    color: hsl(0, 0%, 33%);
+}
+
+/* //////////////////////////////////////////////////////////////// */
+.trabajando {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    text-decoration: underline
+}
+
+/* //////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 768px) {
+    .boxMusica {
+        grid-template-columns: 1fr;
+        grid-template-areas: "albumProximo"
+            "listaProximos"
+            "listaDisponibles";
+    }
+
+    .infoTab {
+        grid-template-columns: 1fr;
+    }
+
+    .carrousel h2 {
+        font-size: medium;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .ultimoImpar {
+        aspect-ratio: 1/1;
+        width: 50%;
+        grid-column: span 2;
+    }
+}

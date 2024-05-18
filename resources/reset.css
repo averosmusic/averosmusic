@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    color: #f3f3f3;
+    text-decoration: none;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+i {
+    font-size: xx-large;
+}
+
+svg {
+    height: 2rem;
+    fill: #f5f5f5;
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: .8rem;
+    }
+
+    i {
+        font-size: x-large;
+    }
+
+    .tituloSeccion, .titleAreaMusica, .titleAreaVideo{
+        font-size: medium;
+    }
+}

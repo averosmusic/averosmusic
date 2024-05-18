@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    justify-content: space-between;
+    place-items: center;
+    background-color: hsla(0, 0%, 0%, .75);
+    border-bottom: 1px solid #FFF;
+    backdrop-filter: blur(5px);
+    padding: 0 2rem
+}
+
+.averosLogo {
+    width: 4rem;
+    aspect-ratio: 1/1
+}
+
+@media only screen and (max-width: 671px) {
+    .menu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        top: 4.25rem;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        transition: left .5s ease
+    }
+
+    .menu a {
+        text-align: center;
+        font-size: larger;
+        padding: 2rem
+    }
+}
+
+@media only screen and (min-width: 671px) {
+    #botonMenuMobile {
+        display: none
+    }
+
+    .menu {
+        display: flex;
+        gap: 5rem
+    }
+}
